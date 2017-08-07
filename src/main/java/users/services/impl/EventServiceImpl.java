@@ -27,7 +27,7 @@ public class EventServiceImpl implements EventService {
         try {
             jmsTemplate.convertAndSend(userEvent.getUserEventType().getEventTypeKey(), userEvent);
         } catch (Exception e) {
-            log.error("Error pushing event to message bus", e);
+            log.error("Error pushing event to message bus: " + userEvent, e);
         }
     }
 }

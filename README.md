@@ -16,6 +16,7 @@ Integrated with ActiveMQ to provide event-based messaging with other microservic
 * Running the microservice:
   * Run: `./gradlew bootrun`
   * Endpoint documentation: `http://localhost:8080/swagger-ui.html#/`
+  * DB access from: `http://localhost:8080/h2-console`
 * Testing:
   * To run unit-tests: `./gradlew test`
   * Postman API Collection: `https://www.getpostman.com/collections/33dc7416385c9d66b992`

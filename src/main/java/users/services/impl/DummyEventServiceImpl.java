@@ -16,6 +16,6 @@ public class DummyEventServiceImpl implements EventService {
 
     @Override
     public void pushEvent(UserEvent userEvent) {
-        log.info("[DUMMY] Pushing new user event to message hub: " + userEvent);
+        log.info("[DUMMY] Pushing new user event to message bus: " + userEvent);
     }
 }

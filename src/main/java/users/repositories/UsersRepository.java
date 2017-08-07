@@ -7,6 +7,4 @@ import users.entities.User;
 
 public interface UsersRepository extends CrudRepository<User, Long>, JpaSpecificationExecutor<User> {
 
-    boolean existsByNickname(String nickname);
-    boolean existsByEmail(String email);
 }

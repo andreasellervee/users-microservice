@@ -15,7 +15,6 @@ import org.springframework.jms.support.converter.MessageType;
 public class MessagingConfiguration {
 
     private static String DEFAULT_BROKER_URL = "tcp://localhost:61616";
-    private static String DEFAULT_QUEUE = "test-user-notification-queue";
 
     @Autowired
     private Environment env;
@@ -39,7 +38,6 @@ public class MessagingConfiguration {
     public JmsTemplate jmsTemplate() {
         JmsTemplate jmsTemplate = new JmsTemplate();
         jmsTemplate.setConnectionFactory(connectionFactory());
-        jmsTemplate.setDefaultDestinationName(env.getProperty("message.bus.queue", DEFAULT_QUEUE));
         jmsTemplate.setMessageConverter(jacksonJmsMessageConverter());
         return jmsTemplate;
     }
